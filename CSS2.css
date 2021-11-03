@@ -1,0 +1,23 @@
+
+.second-heading {
+    color: blue;
+    font-size: large;
+}
+.second-heading.third-heading {
+    color: green;
+}
+#one {
+    color: yellow;
+    font-size: 10px;
+}
+div ~ h1{
+    color: brown;
+}
+html {
+    color: black;
+}
+
+h1 {
+    color:red;
+}
+

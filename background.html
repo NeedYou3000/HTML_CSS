@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>background-clip</title>
+        <style>
+            html, body {
+                margin: 0;
+            }
+
+            .header {
+                width: 100%;
+                height: 100px;
+                background-color: #333;
+                padding: 20px;
+                border: 10px dashed black;
+                background-clip:border-box; /*áp dụng màu nền từ border vào*/
+                background-clip: padding-box; /*Áp dụng màu nền từ padding vào */
+                background-clip: content-box; /*Áp dụng màu nên cho content*/
+            }
+
+            .image {
+                width: 100%;
+                height: 100vh;
+                background-color: aqua;
+                background-image: url(https://media.istockphoto.com/photos/black-and-white-doggy-tile-pattern-repeat-background-picture-id490428980);
+                background-size: contain;
+                /* background-repeat: no-repeat; */
+                
+            }
+
+            .background-size {
+                width: 100%;
+                height: 100vh;
+                background-image: url(https://baoquocte.vn/stores/news_dataimages/dieulinh/012020/29/15/nhung-buc-anh-dep-tuyet-voi-ve-tinh-ban.jpg);
+                background-size: 500px;/*Kich thước background so với element*/
+                background-repeat: no-repeat;
+                background-origin: border-box;/*Giống background-clip nhưng đối với ảnh
+                                    Áp dụng hình ảnh từ ... vào*/
+                background-position: center;
+                background-position: 300px -20%;/*Theo tọa độ (x,y)*/
+                /*=> viết gộp:
+                background: #333 url() center / 500px;
+                */
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+        </br>
+        <div class="image"></div>
+        </br>
+        <div class="background-size">Chinh size</div>
+    </body>
+</html>

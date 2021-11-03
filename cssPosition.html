@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Position</title>
+        <link rel="stylesheet" href="">
+        <style>
+            html, body {
+                margin: 0px;
+            }
+
+            .fixed-box {
+                background-color: violet;
+                width: 100vw;
+                height: 60px;
+                position: fixed;
+                top: 0;
+            }
+
+            .header {
+                width: 100vw;
+                height: 50px;
+                background-color: #333;
+                position: relative;/* Vị trí tương đối là chính vị trí ban đầu của nó*/
+                top: 10px;
+                /* left: 30px; */
+                right: 50px;
+            }
+
+            .box {
+                background-color: blue;
+                height: 50px;
+                width: 100%;
+                position: relative;
+            }
+
+            .box-child {
+                background-color: rgba(116, 134, 10, 0.5);
+                /* height: 30px;
+                width: 30px; */
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                /*Chiếm hết thẻ cha: ko set size và set 4 tt top, bottom, left, right = 0*/
+            }
+
+            .sticky-box {
+                width: 100vw;
+                height: 50px;
+                background-color: brown;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0;
+            }
+
+            ul {
+                height: 2000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fixed-box"></div>
+        <div class="header"></div>
+        <div class="box">
+            <div class="box-child"></div>
+        </div>
+        
+        <h1>Position</h1>
+        <div class="sticky-box"></div>
+        <ul>
+            <li>Relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+    </body>
+</html>

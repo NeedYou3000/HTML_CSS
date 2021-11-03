@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Funtions</title>
+        <style>
+            .box {
+                width: 60%;
+                height: 80px;
+                background: rgba(138, 199, 26, 0.2);
+            }
+
+            #box2 {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(to left, green, red, blue);
+            }
+
+            .box::after {
+                content: attr(data-title);
+            }
+
+            a::after {
+                content: "("attr(href)")";
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" data-title="Đây là box"></div>
+        <div id="box2"></div>
+        <h1>Funtions</h1>
+        <a href="https://www.google.com/">Google</a>
+        <ul>
+            <li>var()</li> <!--Lấy giá trị tham số-->
+            <li>linear-gradient([các_hướng] color1, color2, ...)</li>
+            <li>rgba()</li> <!--Tìm màu dựa theo red,green, blue, alpha(độ trong suốt (0 ->1.0))-->
+            <li>rgb()</li> <!--Tìm màu dựa theo red,green, blue-->
+            <li>calc()</li> <!--Tính toán phép toán-->
+            <li>attr()</li> <!--Lấy giá trị trong thuộc tính của thẻ-->
+        </ul>
+    </body>
+</html>

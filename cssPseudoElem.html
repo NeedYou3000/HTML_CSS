@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudo Class</title>
+        <style>
+            div {
+                height: 40px;
+                width: 100%;
+                background-color: blueviolet;
+            }
+
+            div::before {
+                content: "";
+                display: block;
+                width: 30px;
+                height: 30px;
+                background-color: violet;
+            }
+
+            div::after {
+                content: "";
+                display: ruby;
+                width: 30px;
+                height: 30px;
+                background-color: coral;
+            }
+
+            h1::first-letter {
+                font-size: 30px;
+                color: red;
+            }
+
+            a ::first-line {
+                color: brown;
+            }
+
+            ::selection {
+                background-color: blue;
+                color:red
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="box" ></div>
+        <b><a href="https://viblo.asia/p/tim-hieu-ve-pseudo-elements-trong-css-gAm5ypp8ldb">Các psedou elements</a></b>
+        <h1>Pseudo Element</h1>
+        <ul>
+            <li>::before</li> <!--Thêm text, hình ảnh hay bất kỳ nội dung gì phía trước nội dung của phần tử được chọn.-->
+            <li>::after</li> <!--Thêm vào sau-->
+            <li>::first-letter</li> <!--Tác động lên chữ cái đầu tiên của phần tử được chọn-->
+            <li>::first-line</li> <!--style cho dòng đầu tiên của phần tử được chọn-->
+            <li>::selection</li> <!--style cho một vùng văn bản được người dùng chọn (hay còn gọi là "bôi đen")-->
+
+        </ul>
+    </body>
+</html>
